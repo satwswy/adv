@@ -1,0 +1,688 @@
+@font-face {
+    font-family: "Lausanne";
+    src: url("./fonts/TWKLausannePan-700.eot");
+    src: url("./fonts/TWKLausannePan-700.eot?#iefix") format("embedded-opentype"), url("./fonts/TWKLausannePan-700.woff2") format("woff2"), url("./fonts/TWKLausannePan-700.woff") format("woff"), url("./fonts/TWKLausannePan-700.svg#TWKLausannePan-700") format("svg");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Lausanne";
+    src: url("./fonts/TWKLausannePan-400.eot");
+    src: url("./fonts/TWKLausannePan-400.eot?#iefix") format("embedded-opentype"), url("./fonts/TWKLausannePan-400.woff2") format("woff2"), url("./fonts/TWKLausannePan-400.woff") format("woff"), url("./fonts/TWKLausannePan-400.svg#TWKLausannePan-400") format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "FranklinAntiquaGRAuBi";
+    src: url("./fonts/FranklinAntiquaGRAuBi-Medium.eot");
+    src: url("./fonts/FranklinAntiquaGRAuBi-Medium.eot?#iefix") format("embedded-opentype"), url("./fonts/FranklinAntiquaGRAuBi-Medium.woff2") format("woff2"), url("./fonts/FranklinAntiquaGRAuBi-Medium.woff") format("woff"), url("./fonts/FranklinAntiquaGRAuBi-Medium.svg#FranklinAntiquaGRAuBi-Medium") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Lausanne", sans-serif;
+    background-color: black;
+    padding-top: 150px;
+  }
+  
+  img, svg {
+    display: block;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    overflow-wrap: break-word;
+  }
+  
+  a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  h2, h3 {
+    font-family: "FranklinAntiquaGRAubi", serif;
+  }
+  
+  h2 {
+    font-size: 48px;
+  }
+  
+  h3 {
+    font-size: 30px;
+  }
+  
+  h4 {
+    font-size: 16px;
+  }
+  
+  @media screen and (max-width: 1070px) and (min-width: 0px) {
+    body {
+      padding-top: 0px;
+      margin: 1rem;
+    }
+    body h2 {
+      font-size: 40px;
+    }
+    body h3 {
+      font-size: 24px;
+    }
+    body h4 {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 670px) and (min-width: 0px) {
+    body h2 {
+      font-size: 1.6rem;
+    }
+    body h3 {
+      font-size: 1.6rem;
+    }
+  }
+  header {
+    background-color: rgb(239, 240, 242);
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 60px 60px 0px 60px;
+  }
+  
+  header .header-content {
+    border: 2px solid black;
+  }
+  
+  @media screen and (max-width: 1170px) and (min-width: 0px) {
+    br {
+      display: none;
+    }
+  }
+  header .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(93, 93, 93);
+  }
+  header .title svg {
+    width: min(685px, 90%);
+    height: 50px;
+    fill: rgb(201, 8, 16);
+  }
+  header .title .logo-side-text {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 50px;
+    font-size: 11px;
+    justify-content: space-between;
+    text-align: end;
+    margin-right: 40px;
+  }
+  header .title span:nth-child(2) {
+    color: rgb(201, 8, 16);
+  }
+  
+  @media screen and (max-width: 1170px) and (min-width: 0px) {
+    header .title {
+      padding: 20px;
+      flex-direction: column;
+      gap: 40px;
+    }
+    header .title svg {
+      height: auto;
+    }
+    header .title .logo-side-text {
+      font-size: 16px;
+      height: auto;
+      text-align: center;
+      margin-right: 0;
+    }
+    header .title .logo-side-text span:nth-child(5) {
+      color: rgb(201, 8, 16);
+      position: static;
+    }
+    header .title .logo-side-text span:nth-child(3) {
+      position: relative;
+    }
+  }
+  header .subtitle {
+    position: relative;
+  }
+  header .subtitle p {
+    font-family: "FranklinAntiquaGRAubi", serif;
+    width: min(85%, 560px);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+    padding-block: 40px;
+  }
+  header .subtitle .socials {
+    width: 180px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    right: 40px;
+    gap: 30px;
+  }
+  header .subtitle a svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  header .subtitle a:nth-child(4) svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  @media screen and (max-width: 1170px) and (min-width: 0px) {
+    header .subtitle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header .subtitle .socials {
+      position: static;
+      padding-bottom: 40px;
+    }
+  }
+  @media screen and (max-width: 370px) and (min-width: 0px) {
+    header .subtitle p {
+      font-size: 16px;
+    }
+    header .subtitle .socials {
+      gap: 0px;
+    }
+    header .subtitle .socials svg {
+      width: 50px;
+    }
+  }
+  .red-circle {
+    width: 195px;
+    height: 195px;
+    background-color: rgb(201, 8, 16);
+    border-radius: 50%;
+    color: white;
+    transform: translateY(50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+  }
+  .red-circle span {
+    font-size: 11px;
+    position: relative;
+    top: 12px;
+  }
+  .red-circle img {
+    width: 80%;
+  }
+  .red-circle::after {
+    content: "";
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border: 20px solid rgb(239, 240, 242);
+    position: absolute;
+  }
+  
+  @media screen and (max-width: 1170px) and (min-width: 0px) {
+    .red-circle {
+      transform: translateY(0);
+      position: static;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0px;
+    }
+    .red-circle::after {
+      display: none;
+    }
+    .red-circle > span {
+      font-size: 1rem;
+    }
+  }
+  main {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: rgb(239, 240, 242);
+    padding: 0px 60px 60px 60px;
+  }
+  
+  main .main-content {
+    border: 2px solid black;
+    border-top: 0px;
+  }
+  
+  main .main-content .grid-five:first-child .item:first-child::before {
+    content: "Latest News";
+    font-size: 50px;
+    position: absolute;
+    top: 80px;
+    color: rgb(18, 18, 18);
+  }
+  
+  @media screen and (max-width: 1070px) and (min-width: 0px) {
+    main::before {
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 670px) and (min-width: 0px) {
+    main::before {
+      font-size: 3rem;
+    }
+  }
+  @media screen and (max-width: 370px) and (min-width: 0px) {
+    main::before {
+      font-size: 2.4rem;
+    }
+  }
+  .grid-two {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .grid-two .item {
+    background-color: rgb(239, 240, 242);
+    padding: 80px 40px;
+    outline: 2px solid rgb(93, 93, 93);
+  }
+  .grid-two .item:first-child {
+    grid-column: span 8;
+  }
+  .grid-two .item:not(:first-child) {
+    grid-column: span 4;
+  }
+  .grid-two .item h4 {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 0;
+  }
+  .grid-two .item h4 .right {
+    color: rgb(147, 148, 149);
+  }
+  .grid-two .item > a {
+    display: block;
+  }
+  .grid-two .item > a img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .grid-two .item > a h1, .grid-two .item > a h2, .grid-two .item > a h3 {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .grid-two .item > a p {
+    margin-top: 20px;
+  }
+  
+  @media screen and (max-width: 1170px) and (min-width: 1070px) {
+    .grid-two .item {
+      padding: 28px;
+    }
+  }
+  @media screen and (max-width: 1070px) and (min-width: 671px) {
+    .grid-two .item h3 {
+      font-size: 40px;
+    }
+  }
+  @media screen and (max-width: 1070px) and (min-width: 0px) {
+    .grid-two .item {
+      padding: 30px;
+    }
+    .grid-two .item:first-child, .grid-two .item:not(:first-child) {
+      grid-column: span 12;
+    }
+    .grid-two .item > h1, .grid-two .item > h2, .grid-two .item > h3, .grid-two .item > p {
+      margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 670px) and (min-width: 0px) {
+    .grid-two .item:first-child, .grid-two .item:not(:first-child) {
+      grid-column: span 12;
+    }
+    .grid-two .item {
+      padding: 15px;
+    }
+  }
+  .grid-three {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .grid-three .item {
+    background-color: rgb(239, 240, 242);
+    padding: 80px 40px;
+    outline: 2px solid rgb(93, 93, 93);
+    grid-column: span 4;
+  }
+  .grid-three .item h4 {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 0;
+  }
+  .grid-three .item h4 .right {
+    color: rgb(147, 148, 149);
+  }
+  .grid-three .item > a {
+    display: block;
+  }
+  .grid-three .item > a img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .grid-three .item > a h1, .grid-three .item > a h2, .grid-three .item > a h3 {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .grid-three .item > a p {
+    margin-top: 20px;
+  }
+  
+  @media screen and (max-width: 1170px) and (min-width: 1070px) {
+    .grid-three .item {
+      padding: 28px;
+    }
+  }
+  @media screen and (max-width: 1070px) and (min-width: 671px) {
+    .grid-three .item h3 {
+      font-size: 40px;
+    }
+  }
+  @media screen and (max-width: 1070px) and (min-width: 0px) {
+    .grid-three .item {
+      padding: 30px;
+      grid-column: span 12;
+    }
+    .grid-three .item > h1, .grid-three .item > h2, .grid-three .item > h3, .grid-three .item > p {
+      margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 670px) and (min-width: 0px) {
+    .grid-three .item {
+      padding: 15px;
+    }
+  }
+  .grid-five {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .grid-five .item {
+    background-color: rgb(239, 240, 242);
+    padding: 80px 40px;
+    outline: 2px solid rgb(93, 93, 93);
+  }
+  .grid-five .item:first-child {
+    grid-column: span 8;
+  }
+  .grid-five .item:not(:first-child) {
+    grid-column: span 4;
+  }
+  .grid-five .item h4 {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 0;
+  }
+  .grid-five .item h4 .right {
+    color: rgb(147, 148, 149);
+  }
+  .grid-five .item a img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .grid-five .item h1, .grid-five .item h2, .grid-five .item h3 {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .grid-five .item p {
+    margin-top: 20px;
+  }
+  
+  .grid-five:first-child .item:first-child, .grid-five:first-child .item:nth-child(2) {
+    padding-top: 240px;
+  }
+  
+  @media screen and (max-width: 1170px) and (min-width: 1070px) {
+    .grid-five .item {
+      padding: 28px;
+    }
+  }
+  @media screen and (max-width: 1070px) and (min-width: 0px) {
+    .grid-five:first-child > .item:nth-child(2) {
+      padding-top: 30px;
+    }
+    .grid-five .item {
+      padding: 30px;
+    }
+    .grid-five .item:first-child {
+      grid-column: span 12;
+    }
+    .grid-five .item:not(:first-child) {
+      grid-column: span 6;
+    }
+    .grid-five .item h1, .grid-five .item h2, .grid-five .item h3, .grid-five .item p {
+      margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 670px) and (min-width: 0px) {
+    .grid-five .item:not(:first-child) {
+      grid-column: span 12;
+    }
+    .grid-five .item {
+      padding: 15px;
+    }
+  }
+  .grid-five-order-change {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .grid-five-order-change .item {
+    background-color: rgb(239, 240, 242);
+    padding: 80px 40px;
+    outline: 2px solid rgb(93, 93, 93);
+  }
+  .grid-five-order-change .item:nth-child(2) {
+    grid-column: span 8;
+  }
+  .grid-five-order-change .item:not(:nth-child(2)) {
+    grid-column: span 4;
+  }
+  .grid-five-order-change .item h4 {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 0;
+  }
+  .grid-five-order-change .item .right {
+    color: rgb(147, 148, 149);
+  }
+  .grid-five-order-change .item a {
+    display: block;
+  }
+  .grid-five-order-change .item a img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .grid-five-order-change .item h1, .grid-five-order-change .item h2, .grid-five-order-change .item h3 {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .grid-five-order-change .item p {
+    margin-top: 20px;
+  }
+  
+  @media screen and (max-width: 1170px) and (min-width: 1070px) {
+    .grid-five-order-change .item {
+      padding: 28px;
+    }
+  }
+  @media screen and (max-width: 1070px) and (min-width: 0px) {
+    .grid-five-order-change .item {
+      padding: 30px;
+    }
+    .grid-five-order-change .item:nth-child(2) {
+      grid-column: span 12;
+      order: -1;
+    }
+    .grid-five-order-change .item:not(:nth-child(2)) {
+      grid-column: span 6;
+    }
+    .grid-five-order-change .item h1, .grid-five-order-change .item h2, .grid-five-order-change .item h3, .grid-five-order-change .item p {
+      margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 670px) and (min-width: 0px) {
+    .grid-five-order-change .item:not(:nth-child(2)) {
+      grid-column: span 12;
+    }
+    .grid-five-order-change .item {
+      padding: 15px;
+    }
+  }
+  footer .contact {
+    color: rgb(239, 240, 242);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  footer .contact div:nth-child(2) {
+    display: flex;
+    gap: 20px;
+  }
+  
+  @media screen and (max-width: 1170px) and (min-width: 0px) {
+    footer .contact {
+      gap: 20px;
+    }
+  }
+  @media screen and (max-width: 670px) and (min-width: 0px) {
+    footer .contact div:nth-child(2) {
+      flex-direction: column;
+    }
+  }
+  footer .sites {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  footer .sites a {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: rgb(42, 42, 42);
+    border-radius: 30px;
+    white-space: nowrap;
+    text-align: center;
+    width: 15%;
+    color: rgb(239, 240, 242);
+  }
+  
+  @media screen and (max-width: 1170px) and (min-width: 0px) {
+    footer .sites {
+      gap: 15px;
+    }
+    footer .sites a {
+      width: 26%;
+    }
+  }
+  @media screen and (max-width: 670px) and (min-width: 0px) {
+    footer .sites a {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 370px) and (min-width: 0px) {
+    footer .sites a {
+      width: 60%;
+    }
+  }
+  footer .sponsor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  footer .sponsor span {
+    color: rgb(239, 240, 242);
+    font-size: 24px;
+  }
+  footer .sponsor svg {
+    width: 200px;
+    height: 100px;
+    fill: white;
+  }
+  
+  footer {
+    background-color: rgb(0, 0, 0);
+    padding-top: 100px;
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1600px;
+    margin: 0 auto;
+    max-width: 1600px;
+  }
+  
+  footer > svg {
+    fill: rgb(239, 240, 242);
+    width: 400px;
+    height: 250px;
+  }
+  
+  @media screen and (max-width: 1170px) and (min-width: 0px) {
+    footer {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    footer > svg {
+      width: 300px;
+    }
+  }
+  @media screen and (max-width: 670px) and (min-width: 0px) {
+    footer {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    footer > svg {
+      width: 250px;
+    }
+  }
+  
+  /*# sourceMappingURL=styles.css.map *
